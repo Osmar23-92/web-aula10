@@ -89,3 +89,14 @@ btnFinalizar.addEventListener("click", ()=>{
 btnReiniciar.addEventListener("click", ()=>{
     window.location.reload()
 })
+
+btnApagar.addEventListener("click", ()=> {
+    let selecionados = []
+
+    for(let i = 0; i < inseridos.options.length; i++) {
+        if( inseridos.options[i].selected )
+            selecionados.push(inseridos.options[i].id)
+    }
+
+    console.log( selecionados )
+})
