@@ -32,8 +32,13 @@ numero.addEventListener("keypress", (e)=>{
 btnAdd.addEventListener("click", ()=>{
     if( numero.value == "" ) {
         alert("Insira um número!")
+    } else if (listaNumeros.find( (q)=> q == numero.value) != undefined ) {
+        alert("Número " + numero.value + " já inserido.")
     } else {
-
+       // console.log(
+        //    listaNumeros.find((q)=> q == numero.value)
+      // )
+    
         listaNumeros.push( Number (numero.value) )
         txtContar.innerHTML = "Restam " +
                             (10 - listaNumeros.length) +
