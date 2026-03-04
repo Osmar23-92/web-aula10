@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Betania+Patmos&family=Betania+Patmos+GDL&display=swap');
+
+h1,#txt-contar{
+    font-family: "Betania Patmos", cursive;
+    text-align: center;
+}
+
+label,ul{
+    font-family: "Betania Patmos GDL", cursive;
+    display: block;
+    margin-top: 10px;
+}
+
+label::after{
+    content: "⬅️";
+    font: size 14pt; ;
+}
+
+label::before{
+    content: "➡️";
+    font-size: 14pt;
+}
+
+main{
+    width: 70%;
+    background-color: rgb(96, 42, 247);
+    padding: 5px 20px 30px 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 8px 8px 12px blue;
+    border-radius: 5%;
+}
+button,select{
+    font-family: "Betania Patmos", cursive;
+}
+#btn-add,#numero,#btn-reiniciar,#btn-finalizar,#btn-apagar ,select{
+    background-color: rgb(250, 222, 132);
+}
+
+small{
+    display: block;
+    color: rgb(240, 87, 87);
+}
+
+button {
+    padding: 5px 20px;
+    cursor: pointer;
+    font-size: 14pt;
+
+}
+
+ul, h1 {
+    color: rgb(240, 87, 87);
+}
+
+input, select {
+    font-size: 12pt;
+    padding: 6pt;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#box-btn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 90%;
+        box-shadow: none; 
+        background-color: transparent;    
+    }
+
+    body {
+        background-color: rgb(42, 80, 247);
+    }
+}
+
