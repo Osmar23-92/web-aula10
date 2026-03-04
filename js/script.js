@@ -46,7 +46,7 @@ btnAdd.addEventListener("click", ()=>{
 
         const newOption = document.createElement("option")
         newOption.text = numero.value 
-        newOption.id = numero.value + "-id"
+        newOption.id = numero.value
         inseridos.appendChild(newOption)
 
         //inseridos.size = listaNumeros.length
@@ -94,9 +94,19 @@ btnApagar.addEventListener("click", ()=> {
     let selecionados = []
 
     for(let i = 0; i < inseridos.options.length; i++) {
-        if( inseridos.options[i].selected )
+        if( inseridos.options[i].selected ) {
             selecionados.push(inseridos.options[i].id)
+            
     }
+}
 
-    console.log( selecionados )
+    listaNumeros = listaNumeros.filter()
+
+    console.log( listaNumeros )
+
+    selecionados.forEach((id)=> document.getElementById(id).remove() )
+    
+    txtContar.innerHTML = "Restam " +
+                            (10 - listaNumeros.length) +
+                            "números"
 })
